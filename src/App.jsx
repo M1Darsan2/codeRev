@@ -7,6 +7,7 @@ import { GoogleGenAI } from "@google/genai";
 import Markdown from 'react-markdown'
 import RingLoader from "react-spinners/RingLoader";
 
+
 const App = () => {
   const options = [
     { value: 'javascript', label: 'JavaScript' },
@@ -73,7 +74,7 @@ const App = () => {
 
   const [code, setCode] = useState("");
 
-  const ai = new GoogleGenAI({ apiKey: "AIzaSyBtUnQlnsnrWAtABXIedrKyDx0E1vID0vU" }); // replace "YOUR_API_KEY" with you api key
+  const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GOOGLE }); // replace "YOUR_API_KEY" with you api key
   const [loading, setLoading] = useState(false);
   const [response, setResponse] = useState("");
 
